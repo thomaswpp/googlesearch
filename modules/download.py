@@ -65,7 +65,7 @@ class Download():
 
         if not os.path.exists(path):
             os.mkdir(path) 
-            print("Directory '% s' created" % directory) 
+            print("Directory '% s' created" % path) 
 
         file_name = os.path.join(path, file_name)
 
@@ -85,3 +85,5 @@ if __name__ == '__main__':
     d = Download(logging)
     d._download_image('images', 'teste.png', 'https://d1r66lkjsqxswx.cloudfront.net/wp-content/uploads/2016/04/janitorCutout.png')
     d._download_image('images', 'teste.jpg', 'http://bitcheswhobrunch.com/wp-content/uploads/2019/07/LRG_DSC01160-2.jpg')
+
+    logging.info('Finished')
