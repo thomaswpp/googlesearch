@@ -14,10 +14,6 @@ import time
         https://docs.python.org/2/library/multiprocessing.html#using-a-pool-of-workers
 """
 
-#RETORNAR O NUMERO DE IMAGENS ENCONTRADAS
-#RETORNAR O NUMERO DE IMAGENS BAIXADAS
-#VERIFICAR O USER-AGENTE SE ESTA CORRETO PARA ESTE TIPO DE APLICAÇÃO
-
 class Main():
 
     def __init__(self, search_term, path='images', number_page=10, pool_size=4):
@@ -136,14 +132,6 @@ if __name__ == '__main__':
     search_term   = args.searchterm
     number_page   = args.numberpage
     number_thread = args.numberthread
-
-
-    # path        = 'images'
-    # search_term = '"janitor" "cleaning"'
-    # search_term = 'janitor cleaning floor'
-    # number_page = 10
-    #Example de usage:
-    #python main.py -p images -st "janitor cleaning floor" -np 1 -nt 4
 
     downImage = Main(search_term, path, number_page, number_thread)
     
